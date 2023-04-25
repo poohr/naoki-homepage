@@ -53,7 +53,7 @@
                     <div class="bg-white py-3">
                         <!--サムネイル-->
                         <div class="pb-3">
-                            <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                         </div>
                         <!--記事タイトル-->
                         <h2 class="h4 px-3 pb-3">
@@ -74,7 +74,7 @@
                     <div class="bg-white py-3">
                         <!--サムネイル-->
                         <div class="pb-3">
-                            <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                         </div>
                         <!--記事タイトル-->
                         <h2 class="h4 px-3 pb-3">
@@ -95,7 +95,7 @@
                     <div class="bg-white py-3">
                         <!--サムネイル-->
                         <div class="pb-3">
-                            <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                         </div>
                         <!--記事タイトル-->
                         <h2 class="h4 px-3 pb-3">
@@ -116,26 +116,26 @@
             <div class="row py-3">
                 <!--      メインコンテンツ　-->
                 <div class="col-md-8 col-12">
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <div class="bg-white py-3 mb-5 text-center">
                                 <!--    日付      -->
                                 <p><?php the_time(''); ?></p>
                                 <!--記事タイトル-->
                                 <h2 class="px-3 pb-3 font-weight-bold">
-                                    <?php the_title(); ?>
+                                <?php the_title(); ?>
                                 </h2>
                                 <!--   カテゴリー      -->
                                 <p>
-                                    <?php the_category(' '); ?>
+                                <?php the_category( ' ' ); ?>
                                 </p>
                                 <!--サムネイル-->
                                 <div class="pb-3">
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail(); ?>
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <?php the_post_thumbnail(); ?>
                                     <?php else : ?>
-                                        <p>サムネイルがないです</p>
+                                    <p>サムネイルがないです</p>
                                     <?php endif; ?>
-                                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>" alt="">
+                                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                                 </div>
                                 <!--   ディスクリプション      -->
                                 <p class="text-secondary">
@@ -150,78 +150,16 @@
                                     </a>
                                 </div>
                             </div>
-
-                        <?php endwhile;
-                    else : ?>
+                        <?php endwhile; else : ?>
                         <p>記事がありません。</p>
                     <?php endif; ?>
-
-                    <div class="bg-white py-3 mb-5 text-center">
-                        <!--    日付      -->
-                        <p>2019/12/24</p>
-                        <!--記事タイトル-->
-                        <h2 class="px-3 pb-3 font-weight-bold">
-                            ピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツ
-                        </h2>
-                        <!--   カテゴリー      -->
-                        <p>
-                            <a href="">WordPress</a>
-                        </p>
-                        <!--サムネイル-->
-                        <div class="pb-3">
-                            <img class="img-fluid" src="https://picsum.photos/500/250" alt="">
-                        </div>
-                        <!--   ディスクリプション      -->
-                        <p class="text-secondary">
-                            ピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツ
-                        </p>
-                        <!--ボタン-->
-                        <div class="text-center">
-                            <a href="">
-                                <div class="d-inline-block border p-3 text-secondary">
-                                    READ MORE
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white py-3 mb-5 text-center">
-                        <!--    日付      -->
-                        <p>2019/12/24</p>
-                        <!--記事タイトル-->
-                        <h2 class="px-3 pb-3 font-weight-bold">
-                            ピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツ
-                        </h2>
-                        <!--   カテゴリー      -->
-                        <p>
-                            <a href="">WordPress</a>
-                        </p>
-                        <!--サムネイル-->
-                        <div class="pb-3">
-                            <img class="img-fluid" src="https://picsum.photos/500/250" alt="">
-                        </div>
-                        <!--   ディスクリプション      -->
-                        <p class="text-secondary">
-                            ピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツピックアップコンテンツ
-                        </p>
-                        <!--ボタン-->
-                        <div class="text-center">
-                            <a href="">
-                                <div class="d-inline-block border p-3 text-secondary">
-                                    READ MORE
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
                 <!--   サイドバー   -->
                 <div class="col-md-4 col-12">
                     <!--    プロフィール    -->
                     <div class="container bg-white mb-5 py-5">
                         <div class="mx-5">
-                            <img class="img-fluid rounded-circle" src="https://picsum.photos/1000/1000" alt="">
+                            <img class="img-fluid rounded-circle" src="<?php echo get_template_directory_uri(); ?><?php echo get_template_directory_uri(); ?>https://picsum.photos/1000/1000" alt="">
                         </div>
                         <div class="text-center">
                             <h4 class="d-inline-block py-3 border-bottom border-info">ふるた　なおき</h4>
@@ -244,7 +182,7 @@
                         <div class="pb-5">
                             <!--サムネイル-->
                             <div class="pb-3">
-                                <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?><?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                             </div>
                             <!--記事タイトル-->
                             <h5 class="h5">
@@ -254,7 +192,7 @@
                         <div class="pb-5">
                             <!--サムネイル-->
                             <div class="pb-3">
-                                <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?><?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                             </div>
                             <!--記事タイトル-->
                             <h5 class="h5">
@@ -264,7 +202,7 @@
                         <div class="pb-5">
                             <!--サムネイル-->
                             <div class="pb-3">
-                                <img class="img-fluid" src="https://picsum.photos/300/180" alt="">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="">
                             </div>
                             <!--記事タイトル-->
                             <h5 class="h5">
@@ -310,7 +248,7 @@
                         <a class="twitter-timeline" data-lang="ja" data-height="600" href="https://twitter.com/nao_nao_12_23?ref_src=twsrc%5Etfw">
                             Tweets by nao_nao_12_23
                         </a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <script async src="<?php echo get_template_directory_uri(); ?>https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>
@@ -324,13 +262,13 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="<?php echo get_template_directory_uri(); ?>https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="<?php echo get_template_directory_uri(); ?>https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="<?php echo get_template_directory_uri(); ?>https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 -->
 </body>
 
