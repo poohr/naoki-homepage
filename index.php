@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>naoki-web</title>
+    <title>My Theme</title>
   </head>
   <body>
     <header>
       <div class="container">
-        <h1 class="h1 py-3">naoki-web</h1>
+        <h1 class="h1 py-3">My Theme</h1>
       </div>
     </header>
     <!--グローバルナビ-->
@@ -49,7 +49,7 @@
             <div class="bg-white py-3">
               <!--サムネイル-->
               <div class="pb-3">
-                <img class="img-fluid" src="img/img1.png" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img1.png" alt="">
               </div>
               <!--記事タイトル-->
               <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
@@ -67,7 +67,7 @@
             <div class="bg-white py-3">
               <!--サムネイル-->
               <div class="pb-3">
-                <img class="img-fluid" src="img/img2.png" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img2.png" alt="">
               </div>
               <!--記事タイトル-->
               <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
@@ -85,7 +85,7 @@
             <div class="bg-white py-3">
               <!--サムネイル-->
               <div class="pb-3">
-                <img class="img-fluid" src="img/img3.png" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img3.png" alt="">
               </div>
               <!--記事タイトル-->
               <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
@@ -112,7 +112,7 @@
               <p><a href="">WordPress</a></p>
               <!--サムネイル-->
               <div class="pb-3">
-                <img class="img-fluid" src="img/img4.png" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img4.png" alt="">
               </div>
               <!--ディスクリプション-->
               <p class="text-secondary">サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
@@ -131,7 +131,7 @@
             <!--プロフィール-->
             <div class="container bg-white mb-5 py-5">
               <div class="mx-5">
-                <img class="img-fluid rounded-circle" src="img/img6.png" alt="">
+                <img class="img-fluid rounded-circle" src="<?php echo get_template_directory_uri(); ?>/img/img6.png" alt="">
               </div>
               <div class="text-center">
                 <h4 class="d-inline-block py-3 border-bottom border-info">しもむらともき</h4>
@@ -152,7 +152,7 @@
               <div class="pb-5">             
                 <!--サムネイル-->
                 <div class="pb-3">
-                  <img class="img-fluid" src="img/img7.png" alt="">
+                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img7.png" alt="">
                 </div>
                 <!--記事タイトル-->
                 <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
@@ -160,7 +160,7 @@
               <div class="pb-5">             
                 <!--サムネイル-->
                 <div class="pb-3">
-                  <img class="img-fluid" src="img/img8.png" alt="">
+                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img8.png" alt="">
                 </div>
                 <!--記事タイトル-->
                 <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
@@ -168,7 +168,7 @@
               <div class="pb-5">             
                 <!--サムネイル-->
                 <div class="pb-3">
-                  <img class="img-fluid" src="img/img9.png" alt="">
+                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img9.png" alt="">
                 </div>
                 <!--記事タイトル-->
                 <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
