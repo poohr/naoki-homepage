@@ -47,18 +47,27 @@
         <div class="container">
             <!--ピックアップ記事-->
             <div class="row py-3">
+                <?php $top_query = new WP_Query( 'tag=toppickup' ); ?>
+                <?php if ( $top_query->have_posts() ) : ?>
+                <?php while ( $top_query->have_posts() ) : $top_query->the_post(); ?>
                 <div class="col-md-4 col-12">
                     <div class="bg-white py-3">
                         <!--サムネイル-->
                         <div class="pb-3">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img1.png"
+                            <?php if ( has_post_thumbnail() ) : ?>
+                            <?php the_post_thumbnail('', array('class' => 'img-fluid')); ?>
+                            <?php else : ?>
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img4.png"
                                 alt="">
+                            <?php endif; ?>
                         </div>
                         <!--記事タイトル-->
-                        <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
+                        <h2 class="h4 px-3 pb-3">
+                            <?php the_title(); ?>
+                        </h2>
                         <!--ボタン-->
                         <div class="text-center">
-                            <a href="">
+                            <a href="<?php the_permalink(); ?>">
                                 <div class="d-inline-block border p-3 text-secondary">
                                     READ MORE
                                 </div>
@@ -66,45 +75,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
-                    <div class="bg-white py-3">
-                        <!--サムネイル-->
-                        <div class="pb-3">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img2.png"
-                                alt="">
-                        </div>
-                        <!--記事タイトル-->
-                        <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
-                        <!--ボタン-->
-                        <div class="text-center">
-                            <a href="">
-                                <div class="d-inline-block border p-3 text-secondary">
-                                    READ MORE
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12">
-                    <div class="bg-white py-3">
-                        <!--サムネイル-->
-                        <div class="pb-3">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img3.png"
-                                alt="">
-                        </div>
-                        <!--記事タイトル-->
-                        <h2 class="h4 px-3 pb-3">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h2>
-                        <!--ボタン-->
-                        <div class="text-center">
-                            <a href="">
-                                <div class="d-inline-block border p-3 text-secondary">
-                                    READ MORE
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
             </div>
+
+
             <div class="row py-3">
                 <!--メインコンテンツ-->
                 <div class="col-md-8 col-12">
@@ -142,13 +118,11 @@
                             </a>
                         </div>
                     </div>
-                    <?php endwhile;
-          else : ?>
+                    <?php endwhile; else : ?>
                     <p>記事がありません。</p>
                     <?php endif; ?>
-
-
                 </div>
+
                 <!--サイドバー-->
                 <div class="col-md-4 col-12">
                     <!--プロフィール-->
@@ -173,37 +147,38 @@
                         <div class="text-center pb-5">
                             <h4 class="d-inline-block py-3 border-bottom border-info">読んで欲しい記事</h4>
                         </div>
+
+                        <?php $side_query = new WP_Query( 'tag=sidepickup' ); ?>
+                        <?php if ( $side_query->have_posts() ) : ?>
+                        <?php while ( $side_query->have_posts() ) : $side_query->the_post(); ?>
+
                         <div class="pb-5">
                             <!--サムネイル-->
                             <div class="pb-3">
-                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img7.png"
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                <?php the_post_thumbnail('', array('class' => 'img-fluid')); ?>
+                                <?php else : ?>
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img4.png"
                                     alt="">
+                                <?php endif; ?>
                             </div>
                             <!--記事タイトル-->
-                            <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
+                            <h5 class="h5">
+                                <a class="text-secondary" href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h5>
                         </div>
-                        <div class="pb-5">
-                            <!--サムネイル-->
-                            <div class="pb-3">
-                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img8.png"
-                                    alt="">
-                            </div>
-                            <!--記事タイトル-->
-                            <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
-                        </div>
-                        <div class="pb-5">
-                            <!--サムネイル-->
-                            <div class="pb-3">
-                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/img9.png"
-                                    alt="">
-                            </div>
-                            <!--記事タイトル-->
-                            <h5 class="h5">ピックアップコンテンツ1ピックアップコンテンツ1ピックアップコンテンツ1</h5>
-                        </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
                     </div>
+
                 </div>
             </div>
         </div>
+        </div>
+
         <footer class="bg-white">
             <div class="container">
                 <div class="row">
