@@ -125,23 +125,7 @@
 
                 <!--サイドバー-->
                 <div class="col-md-4 col-12">
-                    <!--プロフィール-->
-                    <div class="container bg-white mb-5 py-5">
-                        <div class="mx-5">
-                            <img class="img-fluid rounded-circle"
-                                src="<?php echo get_template_directory_uri(); ?>/img/img6.png" alt="">
-                        </div>
-                        <div class="text-center">
-                            <h4 class="d-inline-block py-3 border-bottom border-info">しもむらともき</h4>
-                        </div>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                    <!--検索窓-->
-                    <div class="container bg-white mb-5 py-5">
-                        <form>
-                            <input type="text" class="form-control" placeholder="Search for">
-                        </form>
-                    </div>
+                    <?php dynamic_sidebar( 'sidebar_widget01' ); ?>
                     <!--読んで欲しい記事-->
                     <div class="container bg-white mb-5 py-5">
                         <div class="text-center pb-5">
@@ -183,12 +167,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-12">
-                        <div class="pb-5">
-                            <h4 class="d-inline-block py-3 border-bottom border-info">About</h4>
-                        </div>
-                        <p>
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
+                        <?php dynamic_sidebar( 'footer_widget01' ); ?>
                     </div>
 
                     <div class="col-md-4 col-12">
@@ -208,12 +187,7 @@
                     </div>
 
                     <div class="col-md-4 col-12">
-                        <div class="pb-5">
-                            <h4 class="d-inline-block py-3 border-bottom border-info">Twitter</h4>
-                        </div>
-                        <a class="twitter-timeline" data-lang="ja" data-height="600"
-                            href="https://twitter.com/shimo_tmk?ref_src=twsrc%5Etfw">Tweets by shimo_tmk</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <?php dynamic_sidebar( 'footer_widget02' ); ?>
                     </div>
                 </div>
             </div>
